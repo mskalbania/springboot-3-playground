@@ -1,0 +1,28 @@
+spring:
+  threads:
+    virtual:
+      enabled: true
+  application:
+    name: spring-app-1
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+# Metrics accessible at localhost:8081/metrics
+  endpoints:
+    web:
+      exposure:
+        include: "health,prometheus"
+      base-path: "/"
+      path-mapping:
+        prometheus: "metrics"
+  prometheus:
+    metrics:
+      export:
+        enabled: true
+  server:
+    port: 8081
+# All metrics will contain additional application tag
+  metrics:
+    tags:
+      application: spring-app-1

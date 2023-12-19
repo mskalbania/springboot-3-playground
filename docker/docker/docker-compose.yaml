@@ -1,0 +1,9 @@
+version: "3"
+services:
+  grafana-agent:
+    image: grafana/agent:v0.38.1
+    container_name: grafana_agent
+    ports:
+      - "9411:9411"
+    volumes:
+      - "./agent.yaml:/etc/agent/agent.yaml"
