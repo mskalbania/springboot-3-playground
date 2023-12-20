@@ -1,5 +1,5 @@
 # springboot-3-playground
-Example of spring boot observability, virtual threads and native binary
+2 example services that use latest Spring Boot 3 features: observability, virtual threads and native binaries
 
 Stack:
 - maneged Grafana Labs to store metrics, traces and logs
